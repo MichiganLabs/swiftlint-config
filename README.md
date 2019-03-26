@@ -16,15 +16,26 @@ swiftlint lint --config submodule-dir/.swiftlint.yml
 
 See below for an example Build Phase.
 
-```ruby
-if which swiftlint >/dev/null; then
-    echo "swiftlint version:"
-    swiftlint version
+```sh
+set -e
 
-    if [ "${CONFIGURATION}" == "Local" ]; then
-        swiftlint lint --config swiftlint-config/.swiftlint.yml
-    fi
-else
-    echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+if ! which swiftlint >/dev/null; then
+    echo "error: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+    exit 1
 fi
+
+echo "swiftlint version:"
+swiftlint version
+
+swiftlint lint --config swiftlint-config/.swiftlint.yml
 ```
+
+Finally, you'll need to update your `.gitlab-ci.yml` file to pull the submodule when it checksout your project. To do this, add the following two lines to your `before_script` section.
+
+```yml
+before_script:
+    - git submodule sync --recursive
+    - git submodule update --init --recursive
+```
+
+Likewise, you'll need to run these commands locally on your machine when you want to pull the most recent changes from the submodule.
