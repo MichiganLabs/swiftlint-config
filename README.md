@@ -35,7 +35,7 @@ Finally, you'll need to update your `.gitlab-ci.yml` file to pull the submodule 
 ```yml
 before_script:
     - git submodule sync --recursive
-    - git submodule update --init --recursive
+    - git submodule foreach git pull
 ```
 
 Likewise, you'll need to run these commands locally on your machine when you want to pull the most recent changes from the submodule.
