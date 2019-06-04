@@ -39,3 +39,10 @@ before_script:
 ```
 
 Likewise, you'll need to run these commands locally on your machine when you want to pull the most recent changes from the submodule.
+
+## Ignored folders
+The following folders are automatically ignored because they typically contain source code that we did not create and do not want to modify:
+
+* `Carthage`
+* `Vendor`
+* `Pods`
