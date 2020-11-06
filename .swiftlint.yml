@@ -35,6 +35,9 @@ type_name:
 trailing_comma:
   mandatory_comma: true
 
+unused_import:
+  require_explicit_imports: true
+
 disabled_rules:
   - identifier_name
   - missing_docs
@@ -48,9 +51,11 @@ custom_rules:
     message: "Remove defailt file template headers"
     severity: error
 
-# ALL TEH RULEZ
-opt_in_rules:
+analyzer_rules:
+  - unused_import
   - explicit_self
+
+opt_in_rules:
   - unowned_variable_capture
   - empty_count
   - explicit_init
