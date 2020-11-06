@@ -50,6 +50,8 @@ custom_rules:
 
 # ALL TEH RULEZ
 opt_in_rules:
+  - explicit_self
+  - unowned_variable_capture
   - empty_count
   - explicit_init
   - closure_spacing
