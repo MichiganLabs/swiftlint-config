@@ -36,7 +36,7 @@ trailing_comma:
   mandatory_comma: true
 
 unused_import:
-  require_explicit_imports: true
+  require_explicit_imports: false
 
 disabled_rules:
   - identifier_name
