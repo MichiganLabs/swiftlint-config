@@ -4,6 +4,7 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Vendor
   - fastlane
   - .bundle
+  - SourcePackages
 
 nesting:
   type_level: 3
