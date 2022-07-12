@@ -5,6 +5,10 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
   - fastlane
   - .bundle
   - SourcePackages
+  # As of version 0.43.0, configuration files now consistently have their included/excluded relative file paths aplied relative to their location in the file system.
+  - ${PWD}/fastlane
+  - ${PWD}/Vendor
+  - ${PWD}/SourcePackages
 
 nesting:
   type_level: 3
