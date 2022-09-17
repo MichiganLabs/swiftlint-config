@@ -4,6 +4,7 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Vendor
   - fastlane
   - .bundle
+  - /**/.build
   - SourcePackages
   # As of version 0.43.0, configuration files now consistently have their included/excluded relative file paths aplied relative to their location in the file system.
   - ${PWD}/Pods
@@ -11,7 +12,9 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
   - ${PWD}/Vendor
   - ${PWD}/fastlane
   - ${PWD}/.bundle
+  - ${PWD}/**/.build
   - ${PWD}/SourcePackages
+  - "${PWD}/**/*.generated.swift"
 
 nesting:
   type_level: 3
