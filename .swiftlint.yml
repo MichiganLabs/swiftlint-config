@@ -51,9 +51,6 @@ unused_import:
 
 disabled_rules:
   - identifier_name
-  - missing_docs
-  - todo
-  - object_literal
   - multiple_closures_with_trailing_closure
 
 custom_rules:
@@ -78,11 +75,9 @@ opt_in_rules:
   - nimble_operator
   - operator_usage_whitespace
   - closure_end_indentation
-  - missing_docs
   - force_unwrapping
   - prohibited_super_call
   - number_separator
   - first_where
-  - object_literal
   - shorthand_operator
   - fatal_error_message
