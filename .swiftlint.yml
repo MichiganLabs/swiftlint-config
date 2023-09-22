@@ -42,6 +42,8 @@ type_name:
   max_length: # warning and error
     warning: 40
     error: 50
+  allowed_symbols:
+    - _
 
 trailing_comma:
   mandatory_comma: true
