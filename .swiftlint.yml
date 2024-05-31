@@ -79,7 +79,9 @@ opt_in_rules:
   - closure_end_indentation
   - force_unwrapping
   - prohibited_super_call
+  - missing_docs
   - number_separator
   - first_where
   - shorthand_operator
   - fatal_error_message
+  - object_literal
