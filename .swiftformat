@@ -79,4 +79,5 @@
 --wraptypealiases preserve
 --xcodeindentation enabled
 --yodaswap always
+--disable redundantReturn
 --enable isEmpty,blankLineAfterImports
