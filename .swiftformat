@@ -50,15 +50,18 @@
 --patternlet hoist
 --ranges spaced
 --redundanttype inferred
---self remove
---selfrequired
+
+# Requiring explicity usage of self has the following benefits
+# - Assists in visually distinguishing between access to a class property and a local variable
+# - Helps ensure that self is properly captured in closures
+--self insert
+
 --semicolons inline
 --shortoptionals always
 --smarttabs enabled
 --someAny true
 --stripunusedargs always
 --structthreshold 0
---swiftversion 5.7.2
 --tabwidth unspecified
 --trailingclosures
 --trimwhitespace always
@@ -76,5 +79,4 @@
 --wraptypealiases preserve
 --xcodeindentation enabled
 --yodaswap always
---disable andOperator,anyObjectProtocol,blankLinesAroundMark,emptyBraces,extensionAccessControl,fileHeader,genericExtensions,hoistPatternLet,initCoderUnavailable,numberFormatting,opaqueGenericParameters,preferKeyPath,semicolons,strongOutlets,strongifiedSelf,todos,trailingClosures,typeSugar,unusedArguments,void,wrapMultilineStatementBraces,yodaConditions
 --enable isEmpty,blankLineAfterImports

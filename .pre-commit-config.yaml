@@ -1,16 +1,15 @@
 # PLEASE NOTE:
-# If you are installing these scripts on your repo that has `swift-styling` as a submodule, you should uncomment 
-# the `args` line in the swiftlint and swiftformat hook to point to the corresponding config files in the submodule.
+# This configuration file assumes you've added the `swift-styling` directory as a submodule to your repository.
 repos:
   - repo: https://github.com/realm/SwiftLint
     rev: 0.50.3
     hooks:
       - id: swiftlint
         stages: [push]
-        # args: ["--config", "swift-styling/.swiftlint.yml"]
+        args: ["--config", "swift-styling/.swiftlint.yml"]
   - repo: https://github.com/nicklockwood/SwiftFormat
     rev: 0.50.8
     hooks:
       - id: swiftformat
         stages: [push]
-        # args: ["swift-styling/.swiftformat"]
+        args: ["--config", "swift-styling/.swiftformat"]
