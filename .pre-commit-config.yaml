@@ -6,14 +6,14 @@ repos:
     -   id: swiftformat
         name: SwiftFormat
         description: "Check swift files for formatting issues with SwiftFormat"
-        entry: /opt/homebrew/bin/mint run nicklockwood/Swiftformat swiftformat --config swiftlint-config/.swiftformat
+        entry: /opt/homebrew/bin/mint run nicklockwood/Swiftformat --config swiftlint-config/.swiftformat
         language: system
         types: [swift]
         stages: [push]
     -   id: swiftlint
         name: SwiftLint
         description: "Check swift files for style issues with SwiftLint"
-        entry: /opt/homebrew/bin/mint run realm/Swiftlint swiftlint --config swiftlint-config/.swiftlint.yml
+        entry: /opt/homebrew/bin/mint run realm/Swiftlint --config swiftlint-config/.swiftlint.yml
         language: system
         types: [swift]
         stages: [push]
