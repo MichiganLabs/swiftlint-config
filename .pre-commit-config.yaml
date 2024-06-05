@@ -1,15 +1,17 @@
 # PLEASE NOTE:
-# This configuration file assumes you've added the `swift-styling` directory as a submodule to your repository.
+# This configuration file assumes you've added the `swiftlint-config` directory as a submodule to your repository.
 repos:
-  - repo: https://github.com/realm/SwiftLint
-    rev: 0.50.3
+-   repo: local
     hooks:
-      - id: swiftlint
-        stages: [push]
-        args: ["--config", "swift-styling/.swiftlint.yml"]
-  - repo: https://github.com/nicklockwood/SwiftFormat
-    rev: 0.50.8
-    hooks:
-      - id: swiftformat
-        stages: [push]
-        args: ["--config", "swift-styling/.swiftformat"]
+    -   id: swiftformat
+        name: SwiftFormat
+        description: "Check swift files for formatting issues with SwiftFormat"
+        entry: /opt/homebrew/bin/mint run realm/swiftformat swiftformat --config swiftlint-config/.swiftformat
+        language: system
+        types: [swift]
+    -   id: swiftlint
+        name: SwiftLint
+        description: "Check swift files for style issues with SwiftLint"
+        entry: /opt/homebrew/bin/mint run realm/swiftlint swiftlint --config swiftlint-config/.swiftlint.yml
+        language: system
+        types: [swift]
