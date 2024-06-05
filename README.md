@@ -152,3 +152,9 @@ Run the following scripts to install a git hook to check for linting and formatt
 brew install pre-commit
 pre-commit install --config swiftlint-config/.pre-commit-config.yaml --hook-type pre-push
 ```
+
+To test your git hook, you can run the following `pre-commit` command.
+
+```sh
+pre-commit run --all-files --config swiftlint-config/.pre-commit-config.yaml
+```
