@@ -9,9 +9,11 @@ repos:
         entry: /opt/homebrew/bin/mint run realm/swiftformat swiftformat --config swiftlint-config/.swiftformat
         language: system
         types: [swift]
+        stages: [push]
     -   id: swiftlint
         name: SwiftLint
         description: "Check swift files for style issues with SwiftLint"
         entry: /opt/homebrew/bin/mint run realm/swiftlint swiftlint --config swiftlint-config/.swiftlint.yml
         language: system
         types: [swift]
+        stages: [push]
