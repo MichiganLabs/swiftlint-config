@@ -12,7 +12,10 @@
 --decimalgrouping 3,6
 --elseposition same-line
 --emptybraces no-space
---enumnamespaces always
+
+# An empty enum is the canonical way to create a namespace in Swift as it can't be instantiated
+--enumNamespaces always
+
 --enumthreshold 0
 --exponentcase lowercase
 --exponentgrouping disabled
